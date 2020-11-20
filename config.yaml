@@ -1,0 +1,37 @@
+basic:
+  name: tomogan
+  gpu_ids: 0
+  checkpoints_dir: ./checkpoints
+
+model:
+  batch_size: 2
+  image_size: 512
+  depth: 3
+  load_epoch: 1000
+  verbose: True
+
+dataset:
+  num_threads: 4
+  xtrain: ./dataset/noisy4train.h5
+  ytrain: ./dataset/clean4train.h5
+  xtest: ./dataset/noisy4test.h5
+  ytest: ./dataset/clean4test.h5
+
+training:
+  n_epochs: 1000
+  print_freq: 200
+  lr: 1e-4
+  lr_policy: linear
+  vgg_path: ./vgg19-dcbb9e9d.pth
+  itg: 1
+  itd: 2
+  lmse: 0.5
+  lperc: 2.0
+  ladv: 20
+  continue_train: True
+
+evaluation:
+  results_dir: ./results
+  num_test: 10
+
+
