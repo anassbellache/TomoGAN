@@ -1,0 +1,3 @@
+outs:
+- md5: 3274d698f45a593cc1151b72cee995cd
+  path: clean4train.h5
