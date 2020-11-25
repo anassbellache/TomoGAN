@@ -1,0 +1,3 @@
+outs:
+- md5: 95f8ea1e23257131d46bc4ea6cf971ba
+  path: alloy_train.h5
